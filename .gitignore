@@ -17,8 +17,11 @@
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Personal Files and Folders
 /excerises
 /powerpoints
+soln*
 
 npm-debug.log*
 yarn-debug.log*
