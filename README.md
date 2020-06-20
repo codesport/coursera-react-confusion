@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### Install Create-React-App
+### 1. Install Create-React-App
 
 
 `npx create-react-app confusion`
@@ -13,12 +13,12 @@ In the project directory, you can run:
 > *npx:* a package runner tool that comes with npm 5.2+. The npm command is used for managing packages while the npx command actually executes those package
 > ***— [Create React App Tutotial](https://reactjs.org/tutorial/tutorial.html)***
 
-### Create a Remote Repo on GitHub via the Command Line
+### 2. Create a Remote Repo on GitHub via the Command Line
 
     curl -H "Authorization: token PLACE_GITHUB_TOKEN_HERE" https://api.github.com/user/repos -d '{"name":"coursera-react", "private":"true", "description":"React 101 Course", "homepage":"https://codesport.io"}'
 
 
-### Connect Local Repo to the Remote 
+### 3. Connect Local Repo to the Remote 
 
 ```
 git remote add upstream git@github.com:GITHUB_USER_NAME/PROJECT_NAME.git
@@ -30,7 +30,7 @@ git push -u upstream master #NB: for first commit -u is shorthand for '--set-ups
 > remote repo `origin` when the remote is the master, source repo. For example, when we fork someone else's project with the intent of doing a pull request, 
 > the remote repo would be the origin, source and master repor
 
-### [Optional: Install ReactStrap](https://www.npmjs.com/package/reactstrap)
+### 4. [Optional: Install ReactStrap](https://www.npmjs.com/package/reactstrap)
 
 ```
 npm add bootstrap
