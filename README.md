@@ -15,13 +15,16 @@ In the project directory, you can run:
 
 ### Create a Remote Repo on GitHub via the Command Line
 
-`curl -H "Authorization: token PLACE_TOKEN_HERE" https://api.github.com/user/repos -d '{"name":"coursera-react", "private":"true", "description":"React 101 Course", "homepage":"https://www.coursera.org/learn/front-end-react/supplement/lwfpx/exercise-instructions-getting-started-with-react"}'`
+    curl -H "Authorization: token PLACE_TOKEN_HERE" https://api.github.com/user/repos -d '{"name":"coursera-react", "private":"true", "description":"React 101 Course", "homepage":"https://www.coursera.org/learn/front-end-react/supplement/lwfpx/exercise-instructions-getting-started-with-react"}'
 
 
 ### Connect Local Repo to the Remote 
 
-`git remote add upstream git@github.com:GITHUB_USER_NAME/PROJECT_NAME.git`
-`git push -u upstream master #NB: for first commit -u is shorthand for '--set-upstream' and activates branch tracking`
+```
+git remote add upstream git@github.com:GITHUB_USER_NAME/PROJECT_NAME.git
+
+git push -u upstream master #NB: for first commit -u is shorthand for '--set-upstream' and activates branch tracking
+```
 
 > NB: We are calling our remote, slave repo `upstream`. `Upstream` is named when the local repo is the master, source repo. Alternatively, we would name it 
 > `origin` when the remote is the source repo. For example when we fork someone else's project with the intent of doing a pull request.
