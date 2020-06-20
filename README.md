@@ -6,7 +6,6 @@ In the project directory, you can run:
 
 ### 1. Install Create-React-App
 
-
 `npx create-react-app confusion`
 
 
@@ -34,9 +33,30 @@ git push -u upstream master #NB: for first commit -u is shorthand for '--set-ups
 
 ```
 npm add bootstrap
+
 npm add reactstrap react react-dom
 ```
 
 Import Bootstrap CSS into the src/index.js file likeso: 
 
 `import 'bootstrap/dist/css/bootstrap.css'`
+
+
+## Pro Tip: [Renaming local and remote](https://stackoverflow.com/a/30590238/946957)
+
+```
+# Rename the local branch to the new name
+git branch -m <old_name> <new_name>
+
+# Delete the old branch on remote - where <remote> is, for example, origin
+git push <remote> --delete <old_name>
+
+# Or shorter way to delete remote branch [:]
+git push <remote> :<old_name>
+
+# Push the new branch to remote
+git push <remote> <new_name>
+
+# Reset the upstream branch for the new_name local branch
+git push <remote> -u <new_name>
+```
