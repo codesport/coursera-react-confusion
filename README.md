@@ -66,12 +66,9 @@ git push <remote> -u <new_name>
 
 ## React Advanced Tips 
 
-When writing React code, use arrow functions everywhere. It will be a very rare case where you need to use the function keyword
-https://stackoverflow.com/a/46854363/946957
+[Lifting Up State](https://reactjs.org/tutorial/tutorial.html#lifting-state-up)
 
-https://reactjs.org/tutorial/tutorial.html#lifting-state-up
-
-https://stackoverflow.com/questions/53165945/what-is-usestate-in-react
+[useState for Functional Components](https://stackoverflow.com/questions/53165945/what-is-usestate-in-react)
 
 https://reactjs.org/docs/hooks-intro.html
 
@@ -113,6 +110,9 @@ r_test = (idx) => (      //implicit return
 
 
 [React: Calling a function inside a map function](https://stackoverflow.com/a/46854363/946957)
+
+When writing React code, use arrow functions everywhere. It will be a very rare case where you need to use the function keyword
+https://stackoverflow.com/a/46854363/946957
 
 Creates a new function: `() => this.renderText(key)`
 
