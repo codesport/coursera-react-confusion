@@ -38,7 +38,7 @@ class Main extends React.Component{
           {/* We only want to send the ID of of the selected dish, so we apply the JS filter() method to extract it 
               from the SelectedDish array. Where it lives as the 1st element [0] in the SelectedDish array
 
-              array.filter( plae_holder_variable_name_for_single_array_item_to_test =>  test_expression)
+              array.filter( variable_name_for_single_array_item_to_test =>  test_expression_on_variable_name_for_single_array_item_to_test )
               https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter 
               
               The filter() method creates a new array with all elements that pass the test implemented by the
@@ -46,7 +46,7 @@ class Main extends React.Component{
               
               */}
               {console.log("Sent from MenuComponent: " + this.state.selectedDish)}
-              {console.log(this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0])}  
+              {console.log(this.state.dishes.filter( var_to_test => var_to_test.id === this.state.selectedDish)[0])}  
 
           <DishDetail selectedDish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} /> 
 
