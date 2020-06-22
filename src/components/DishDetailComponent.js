@@ -31,7 +31,9 @@ class DishDetail extends React.Component{
                     <ul className="list-unstyled">
                         {comments.map( (singleComment) =>
                             <li key={singleComment.id}>{singleComment.comment}<br />
-                            -- {singleComment.author}, {singleComment.date}<br /><br />
+                            -- {singleComment.author}, {/*singleComment.date*/}
+                            {/*new Date().toLocaleTimeString().format(new Date(Date.parse(comment.date)))*/}
+                            {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(singleComment.date)))}<br /><br />
                             </li>
                         )}
                     </ul>
@@ -42,22 +44,26 @@ class DishDetail extends React.Component{
 
     render(){
 
-        return(
+        if ( this.props.selectedDish ){
+            return(
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-md-5 m-1"> 
+                            {this.renderDish(this.props.selectedDish) /*selectedDish =name of prop based from MenuComponent.js*/}           
+                        </div>
 
-            <div className="row">
-            
-                <div className="col-12 col-md-5 m-1"> 
-                    {this.renderDish(this.props.selectedDish) /*selectedDish =name of prop based from MenuComponent.js*/}           
+                        <div className="col-12 col-md-5 m-1">  
+                            {this.renderComments(this.props.selectedDish.comments)}
+                        </div>
+                    </div>
                 </div>
+            );
+        
+        } else {
 
-                <div className="col-12 col-md-5 m-1">  
-                    {this.renderComments(this.props.selectedDish.comments)}
-                </div>
+            return(<div></div>)
 
-            </div>
-
-        );
-
+        }
 
     }
 
