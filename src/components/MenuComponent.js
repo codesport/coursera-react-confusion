@@ -17,7 +17,7 @@ class Menu extends React.Component {
                         3. It sends dish.id to the parent, MainComponent
                         
                     Default behavior is the parent stores and sends information to children
-                    It should be sending the onClick event to the parent MainComponent (which sends it to DishDetailsComponent)
+                    It should be sending the onClick event to the parent MainComponent (which parent sends to DishDetailsComponent)
                     This tells the onClick function what to do by capturing the onClick function (and it resulting ouptut) supplied by MainComponent through the props to deal with the clicking of a menu item                    
                     
                     */}> 
