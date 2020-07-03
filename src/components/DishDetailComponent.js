@@ -1,6 +1,9 @@
 import React from 'react';
 import { Card, CardImg, /*CardImgOverlay,*/ CardText, CardBody, CardTitle } from 'reactstrap';
 
+//Receives Selected Dish from MainComponent.js
+//EXERCISE: Convert class components into functional components
+
 function RenderDish(dish){
     return(
         <Card> 

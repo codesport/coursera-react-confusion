@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Objective
+
+In this exercise we implement our components as [pure functional components](https://www.coursera.org/learn/front-end-react/supplement/wiObL/exercise-instructions-functional-components).
+
 
 ## How-to Guide
 
@@ -45,10 +48,21 @@ Import Bootstrap CSS into the src/index.js file likeso:
 `import 'bootstrap/dist/css/bootstrap.css'`
 
 
-## Pro Tip: [Renaming Local and Remote Branches](https://stackoverflow.com/a/30590238/946957)
+## Pro Tip: Renaming Local and Remote Branches
+
+### [Rename a Local Branch which Hasn't Been Pushed to the Remote](https://stackoverflow.com/a/6591218/946957)
+
+If you want to rename the current branch, you can do:
+
+`git branch -m <newname>`
+
+(-m is for "move" which is how you rename in Git)
+
+
+### [Renaming Local and Remote Branches](https://stackoverflow.com/a/30590238/946957)
 
 ```
-# Rename the local branch to the new name (-m is for "move" which is how you rename in Git)
+# Rename the local branch to the new name 
 git branch -m <old_name> <new_name>
 
 # Delete the old branch on remote - where <remote> is, for example, origin
@@ -89,19 +103,45 @@ https://jsonplaceholder.typicode.com/todos/
 
 https://jsonplaceholder.typicode.com/guide.html
 
+### Functional Components
 
-[reactjs how to call method inside map function](https://stackoverflow.com/a/49006363/946957)
+*NB:* The first letter of functional components is always capitalized.
+
 ```
+const  DishDetail = (props) =>{
+
+  ...
+
+}
+```
+
+Is the same as
+
+```
+function DishDetail(props) {
+
+  ...
+
+}
+```
+
+###  [Returning Results from React Methods](https://stackoverflow.com/a/49006363/946957)
+
+```
+//function r_test(idx){...}
 r_test = (idx) => {
-   return  <div className="input-field">   // return explicitly
+   return  (
+    <div className="input-field">   // return explicitly
       <label className="active">Titre</label>
     </div>
+   )
   }
 ```
 Or
 
 ```
-r_test = (idx) => (      //implicit return
+//function r_test(idx){...}
+r_test = (idx) => (      //just parentheses means an implicit return
     <div className="input-field">
       <label className="active">Titre</label>
     </div>
@@ -109,7 +149,7 @@ r_test = (idx) => (      //implicit return
 ```
 
 
-[React: Calling a function inside a map function](https://stackoverflow.com/a/46854363/946957)
+### [Calling a Function Inside a Map Function](https://stackoverflow.com/a/46854363/946957)
 
 When writing React code, use arrow functions everywhere. It will be a very rare case where you need to use the function keyword
 https://stackoverflow.com/a/46854363/946957
