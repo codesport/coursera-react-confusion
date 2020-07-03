@@ -48,9 +48,9 @@ Import Bootstrap CSS into the src/index.js file likeso:
 `import 'bootstrap/dist/css/bootstrap.css'`
 
 
-## Pro Tip: Renaming Local and Remote Branches
+# Pro Tip: Renaming Local and Remote Branches
 
-### [Rename a Local Branch which Hasn't Been Pushed to the Remote](https://stackoverflow.com/a/6591218/946957)
+## [Rename a Local Branch which Hasn't Been Pushed to the Remote](https://stackoverflow.com/a/6591218/946957)
 
 If you want to rename the current branch, you can do:
 
@@ -59,7 +59,7 @@ If you want to rename the current branch, you can do:
 (-m is for "move" which is how you rename in Git)
 
 
-### [Renaming Local and Remote Branches](https://stackoverflow.com/a/30590238/946957)
+## [Renaming Local and Remote Branches](https://stackoverflow.com/a/30590238/946957)
 
 ```
 # Rename the local branch to the new name 
@@ -78,7 +78,7 @@ git push <remote> <new_name>
 git push <remote> -u <new_name>
 ```
 
-## React Advanced Tips 
+# React Advanced Tips 
 
 [Lifting Up State](https://reactjs.org/tutorial/tutorial.html#lifting-state-up)
 
@@ -103,9 +103,15 @@ https://jsonplaceholder.typicode.com/todos/
 
 https://jsonplaceholder.typicode.com/guide.html
 
-### Functional Components
+## Functional Components
 
-*NB:* The first letter of functional components is always capitalized.
+
+> JavaScript function that returns a React element, or a collection of React elements that define the view
+> Receives a “props” object as a parameter
+>
+> -Jogesh K. Muppala 
+
+The first letter of functional components is always capitalized. Also note that: 
 
 ```
 const  DishDetail = (props) =>{
@@ -115,7 +121,7 @@ const  DishDetail = (props) =>{
 }
 ```
 
-Is the same as
+Is the same as:
 
 ```
 function DishDetail(props) {
@@ -125,7 +131,7 @@ function DishDetail(props) {
 }
 ```
 
-###  [Returning Results from React Methods](https://stackoverflow.com/a/49006363/946957)
+## [Returning Results from React Methods](https://stackoverflow.com/a/49006363/946957)
 
 ```
 //function r_test(idx){...}
@@ -149,7 +155,7 @@ r_test = (idx) => (      //just parentheses means an implicit return
 ```
 
 
-### [Calling a Function Inside a Map Function](https://stackoverflow.com/a/46854363/946957)
+## [Calling a Function Inside a Map Function](https://stackoverflow.com/a/46854363/946957)
 
 When writing React code, use arrow functions everywhere. It will be a very rare case where you need to use the function keyword
 https://stackoverflow.com/a/46854363/946957
@@ -170,14 +176,15 @@ Read about arrow functions and scope of this, refer in the "No Separate this" se
 
 [Using javascript map with a function that has two arguments](https://stackoverflow.com/questions/12344087/using-javascript-map-with-a-function-that-has-two-arguments)
 
-[]()
 
-[]()
+## [React Component Types: Additional Resources](https://www.coursera.org/learn/front-end-react/supplement/5ccBp/react-component-types-additional-resources)
 
-[]()
+[Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
 
-[]()
+[Presentational and Container Components (Redux Perspective)](https://redux.js.org/basics/usage-with-react)
 
-[]()
+[React Component Patterns](https://levelup.gitconnected.com/react-component-patterns-ab1f09be2c82)
+
+[Functional Stateless Components in React](https://javascriptplayground.com/functional-stateless-components-react/)
 
 []()
