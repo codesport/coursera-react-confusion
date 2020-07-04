@@ -135,9 +135,9 @@ function DishDetail(props) {
 
 ```
 //function r_test(idx){...}
-r_test = (idx) => {
+r_test = (idx) => { // When using brackets you must return explicitly
    return  (
-    <div className="input-field">   // return explicitly
+    <div className="input-field">   
       <label className="active">Titre</label>
     </div>
    )
@@ -147,7 +147,7 @@ Or
 
 ```
 //function r_test(idx){...}
-r_test = (idx) => (      //just parentheses means an implicit return
+r_test = (idx) => (  // Just parentheses means an implicit return
     <div className="input-field">
       <label className="active">Titre</label>
     </div>
