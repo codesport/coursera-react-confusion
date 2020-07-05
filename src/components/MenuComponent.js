@@ -5,11 +5,16 @@ import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
 //EXERCISE: Convert class components into functional components
 
-function RenderMenuItem(dish, onClick) {
+
+/*
+* Receives individual dish (from Menu functional component below) and instructions for 
+* onClick handler from MainComponent {(dishID)=>this.onDishSelect(dishID)}
+*/
+function RenderMenuItem(dish, onClick) { 
     //function RenderMenuItem({dish, onClick})
 
     return(    
-        <Card onClick={() => onClick(dish.id)} > 
+        <Card onClick={() => onClick(dish.id)} /* onClick in MenuComponent triggers onClick in MainComponent */> 
             <CardImg width="100%" src={dish.image} alt={dish.name} />
             <CardImgOverlay>
                 <CardTitle>{dish.name}</CardTitle>
@@ -21,7 +26,7 @@ function RenderMenuItem(dish, onClick) {
 }
 
 //function Menu(props) {}
-const Menu = (props) => {
+const Menu = (props) => {//recieves props (dishes and OnClick) from MainComponents
 
         const menu = props.dishes.map((dish) =>{ //note the use of this.props.dishes.map( and not this.state.dishes.map(
             return(//key={dish.id} can be in either the <Card> or the <div>, not both

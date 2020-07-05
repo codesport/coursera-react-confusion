@@ -43,10 +43,25 @@ npm add bootstrap
 npm add reactstrap react react-dom
 ```
 
-Import Bootstrap CSS into the src/index.js file likeso: 
+Import Bootstrap CSS into the src/index.js file like so: 
 
 `import 'bootstrap/dist/css/bootstrap.css'`
 
+
+### 5. Optional: Install Font Awesome and Boostrap Social
+
+```
+npm add font-awesome@4.7.0
+
+npm add bootstrap-social@5.1.1
+```
+
+Next, import the new CSS files into the src/index.js file like so: 
+
+```
+import 'font-awesome/css/font-awesome.css';
+import 'bootstrap-social/bootstrap-social.css';
+```
 
 # Pro Tip: Renaming Local and Remote Branches
 
