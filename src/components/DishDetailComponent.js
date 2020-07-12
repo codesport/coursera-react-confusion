@@ -42,10 +42,12 @@ const  DishDetail = (props) =>{
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-5 m-1"> 
+                        {/* This is an example of conditional rendering */}
                         {props.selectedDish && RenderDish(props.selectedDish) /*selectedDish =name of prop based from MenuComponent.js*/}           
                     </div>
 
                     <div className="col-12 col-md-5 m-1">  
+                        {/* This is an example of conditional rendering */}
                         {props.selectedDish &&  RenderComments(props.selectedDish.comments)}
                     </div>
                 </div>

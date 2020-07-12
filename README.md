@@ -72,6 +72,8 @@ Creates a specialized history object. Don't forget to encolose your app in Brows
     );
 ```
 
+Cousera resources: https://www.coursera.org/learn/front-end-react/supplement/1kwdK/react-router-additional-resources
+
 ### 4. [Optional: Install ReactStrap](https://www.npmjs.com/package/reactstrap)
 
 
@@ -249,3 +251,16 @@ Read about arrow functions and scope of this, refer in the "No Separate this" se
 [Functional Stateless Components in React](https://javascriptplayground.com/functional-stateless-components-react/)
 
 []()
+
+# Conditional Rendering
+
+> You can also conditionally prevent a feature from rendering using the && operator:
+
+    function Feature(props){
+        return (
+            props.active && <h1>{props.message}</h1>
+        )
+    }
+> With the && operator, true and expression will always evaluate to expression. On the other hand, false and expression will always evaluate to false which won't render.
+
+> ***— [Benjamin Lin via Coursera](https://courses.edx.org/courses/course-v1:Microsoft+DEV281x+1T2019a/courseware/8aeb17a4bc2d4ef7bba69a7c298f7f57/ff99d3092c12461892a35e405857f349/?activate_block_id=block-v1%3AMicrosoft%2BDEV281x%2B1T2019a%2Btype%40sequential%2Bblock%40ff99d3092c12461892a35e405857f349)** 
