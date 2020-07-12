@@ -39,6 +39,8 @@ git push -u upstream master #NB: for first commit -u is shorthand for '--set-ups
 
 ### 4. [Install React Router](https://www.npmjs.com/package/react-router) 
 
+Allows us to navigate amongst views on single page websites (apps)
+
 > `npm install` and `add` are aliases. The `--save` option is deprecated. Since NPM 5, packages are saved automatically; there is no `--save` option.
 > ***— [SamVK via Stackoverflow](https://stackoverflow.com/a/51466842/946957)***
 
@@ -53,6 +55,23 @@ git push -u upstream master #NB: for first commit -u is shorthand for '--set-ups
 
 Create a [demo](https://reactrouter.com/web/guides/quick-start) React Router App.
 
+
+In `App.js` import BrowsweRouter:
+
+`import { BrowserRouter } from 'react-router-dom';`
+
+Creates a specialized history object. Don't forget to encolose your app in BrowserRouter. For example:
+
+```
+    return (
+
+      <BrowserRouter>
+        <div className="App">
+            <Main />
+        </div>
+      </BrowserRouter>
+    );
+```
 
 ### 4. [Optional: Install ReactStrap](https://www.npmjs.com/package/reactstrap)
 
