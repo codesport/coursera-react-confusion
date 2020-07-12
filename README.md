@@ -64,7 +64,6 @@ Creates a specialized history object. Don't forget to encolose your app in Brows
 
 ```
     return (
-
       <BrowserRouter>
         <div className="App">
             <Main />
