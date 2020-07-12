@@ -42,12 +42,12 @@ git push -u upstream master #NB: for first commit -u is shorthand for '--set-ups
 > `npm install` and `add` are aliases. The `--save` option is deprecated. Since NPM 5, packages are saved automatically; there is no `--save` option.
 > ***— [SamVK via Stackoverflow](https://stackoverflow.com/a/51466842/946957)***
 
-Applications for the browser:
+*Option 1:* Applications for the browser:
 
 `npm add react-router-dom` 
 
 
-React Native (for mobile) applications:
+*Option 2:* React Native (for mobile) applications:
  
 `npm react-router-native`
 
