@@ -35,7 +35,27 @@ git push -u upstream master #NB: for first commit -u is shorthand for '--set-ups
 > remote repo `origin` when the remote is the master, source repo. For example, when we fork someone else's project with the intent of doing a pull request, 
 > the remote repo would be the origin, source and master repo.
 
+
+
+### 4. [Install React Router](https://www.npmjs.com/package/react-router) 
+
+> `npm install` and `add` are aliases. The `--save` option is deprecated. Since NPM 5, packages are saved automatically; there is no `--save` option.
+> ***— [SamVK via Stackoverflow](https://stackoverflow.com/a/51466842/946957)***
+
+Applications for the browser:
+
+`npm add react-router-dom` 
+
+
+React Native (for mobile) applications:
+ 
+`npm react-router-native`
+
+Create a [demo](https://reactrouter.com/web/guides/quick-start) React Router App.
+
+
 ### 4. [Optional: Install ReactStrap](https://www.npmjs.com/package/reactstrap)
+
 
 ```
 npm add bootstrap
@@ -46,6 +66,8 @@ npm add reactstrap react react-dom
 Import Bootstrap CSS into the src/index.js file like so: 
 
 `import 'bootstrap/dist/css/bootstrap.css'`
+
+Reactstrap [Demos](https://reactstrap.github.io/components/alerts/)
 
 
 ### 5. Optional: Install Font Awesome and Boostrap Social
@@ -92,6 +114,12 @@ git push <remote> <new_name>
 # Reset the upstream branch for the new_name local branch
 git push <remote> -u <new_name>
 ```
+
+# Pro-tip: Deleting a Local Branch
+
+If you misnamed a new local branch and haven't done any editing or commits, you can delete it via:
+
+ `git branch -d bad_branch_name`
 
 # React Advanced Tips 
 

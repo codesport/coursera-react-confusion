@@ -14,7 +14,7 @@ function RenderMenuItem(dish, onClick) {
     //function RenderMenuItem({dish, onClick})
 
     return(    
-        <Card onClick={() => onClick(dish.id)} /* onClick in MenuComponent triggers onClick in MainComponent */> 
+        <Card /*onClick={() => onClick(dish.id)}*/ /* onClick in MenuComponent triggers onClick in MainComponent */> 
             <CardImg width="100%" src={dish.image} alt={dish.name} />
             <CardImgOverlay>
                 <CardTitle>{dish.name}</CardTitle>

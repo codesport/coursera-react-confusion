@@ -1,15 +1,72 @@
 import React from 'react';
-import { Navbar, NavbarBrand, Jumbotron } from 'reactstrap';
+import { Navbar, NavbarBrand, Jumbotron, Nav, NavbarToggler, Collapse, NavItem } from 'reactstrap';
+import { NavLink } from 'react-router-dom'
 
 class Header extends React.Component{
+
+    constructor (props){
+        super(props);
+        this.state = {//define the default local state here
+            isNavOpen: false,
+        }
+    }
+
+    toggleNav = () =>{
+        this.setState ({
+            isNavOpen: !this.state.isNavOpen
+        })
+
+        console.log('toggleNav functional call - Nav Bar Is Open: ' + this.state.isNavOpen)
+
+    }        
+
+/* OR
+    toggleNav =() =>{
+        this.setState( prevState => ({
+            isNavOpen: !prevState.isNavOpen,
+        }));
+        console.log('toggleNav functional call - Nav Bar Is Open: ' + this.state.isNavOpen)
+    }
+
+*/
+
+ 
+
 
     render(){
 
         return(
             <React.Fragment>
-                <Navbar dark color="primary">
+                <Navbar dark expand="md"> {/*expand="md" means collapse for medium screen sizes.  TODO: when and why was color="primary" removed?*/}
                     <div className="container">
-                        <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+
+                    <NavbarToggler onClick={this.toggleNav} />
+                        <NavbarBrand className="mr-auto" href="/">
+                            <img src="assets/images/logo.png" height="30" width="41" alt="Ristorante Con Fusion" />
+                        </NavbarBrand>
+                        
+                        <Collapse isOpen={this.state.isNavOpen} navbar>
+                        {console.log('Initial Render - Nav Bar Is Open: ' + this.state.isNavOpen)}
+                            <Nav navbar>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/home">
+                                        <span className="fa fa-home fa-lg"></span> Home
+                                    </NavLink>                                
+                                </NavItem>
+
+                                <NavItem>
+                                    <NavLink className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> About Us</NavLink>
+                                </NavItem>
+
+                                <NavItem>
+                                    <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
+                                </NavItem>
+
+                                <NavItem>
+                                    <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
+                                </NavItem>                                
+                            </Nav>
+                        </Collapse>
                     </div>
                 </Navbar>
                 <Jumbotron>
