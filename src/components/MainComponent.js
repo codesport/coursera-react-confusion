@@ -16,7 +16,6 @@ class Main extends React.Component{
 
     this.state ={
       dishes: DISHES, //json arrary of dishes and comments from ../shared/dishes,js.  Simulate DB query
-      selectedDish: null
     }
 
   }
