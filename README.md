@@ -31,9 +31,9 @@ git remote add upstream git@github.com:GITHUB_USER_NAME/PROJECT_NAME.git
 git push -u upstream master #NB: for first commit -u is shorthand for '--set-upstream' and activates branch tracking
 ```
 
-> NB: We are calling our remote, slave repo `upstream`. `Upstream` is named when the local repo is the master, source repo. Alternatively, we would name the 
-> remote repo `origin` when the remote is the master, source repo. For example, when we fork someone else's project with the intent of doing a pull request, 
-> the remote repo would be the origin, source and master repo.
+> NB: We are calling our remote, slave repo `upstream`. `Upstream` is named when the local repo is the master and source repo. Alternatively, we would name the 
+> remote repo `origin` when the remote is the "master and source repo". For example, when we fork someone else's project with the intent of doing a pull request, 
+> the remote repo would be the `origin` (i.e, the "master and source repo").
 
 
 
@@ -60,7 +60,7 @@ In `App.js` import BrowsweRouter:
 
 `import { BrowserRouter } from 'react-router-dom';`
 
-Creates a specialized history object. Don't forget to encolose your app in BrowserRouter. For example:
+Now, create a specialized history object. Don't forget to enclose your app in BrowserRouter. For example:
 
 ```
     return (
